@@ -10,6 +10,7 @@ terraform {
 # Use AWS Terraform provider
 provider "aws" {
   region = "eu-west-1"
+  version = "~> 2.0"
 }
 
 # Create EC2 instance
@@ -21,7 +22,7 @@ resource "aws_instance" "default" {
   source_dest_check      = false
   instance_type          = "${var.instance_type}"
 
-  tags {
+  tags = {
     Name = "terraform-default"
   }
 }
