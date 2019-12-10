@@ -15,6 +15,6 @@ variable "instance_type" {
 variable "ami" {
   description = "Base AMI to launch the instances"
 
-  # Tomcat AMI
-  default = "ami-62c86115"
+  # Tomcat AMI -  "ami-62c86115"
+  default = " ami-01f14919ba412de34"
 }
